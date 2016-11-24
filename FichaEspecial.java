@@ -9,10 +9,10 @@ package dots;
  *
  * @author c0ep
  */
-public abstract class FichaEspecial extends Ficha{
-    
+public abstract class FichaEspecial extends Ficha implements Efecto{
+   
    public FichaEspecial (String forma){ //Constructor
-    super(forma);
+        super(forma);
 }
     
 }

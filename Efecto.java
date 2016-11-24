@@ -9,14 +9,6 @@ package dots;
  *
  * @author c0ep
  */
-public class Casilla  {
-     private int x,y;//Posicion de la casilla
-     private  double ficha; //Contenido de la casilla
-    
-    public Casilla(double f){  
-       this.ficha=f;
-} 
-  
-    
+public interface Efecto {
+   public void accion();   
 }
-    
