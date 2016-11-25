@@ -9,7 +9,8 @@ package dots;
 public class Dots {
     
     public static void main(String[] args) {
-        Tablero tab=new Tablero(50,50);    // TODO code application logic here
+        Casilla casilla=new Casilla(5);
+        Tablero tab= new Tablero(casilla);// TODO code application logic here
     }
     
 }
