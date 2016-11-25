@@ -5,34 +5,22 @@
  */
 package dots;
 
-final public class Tablero {
-    private final int x,y; //Filas y columnas
-    private final double[][] valor;// Valor posicion
-    private Casilla casilla;
- 
+ public class Tablero { 
     //Metodos:
-    public Tablero (int x, int y){ // Asigna # de filas y de columnas
-        this.x=x;
-        this.y=y;
-        valor= new double[x][y];
-        
+    public Tablero (Casilla casilla){ // Asigna # de filas y de columnas
+        this.pintarmatriz(casilla);
       };
   
-    public void pintarmatriz(Tablero A,int x, int y){
-        for (int i=0; i<=x; i++)
-            for (int j=0; j<=y;j++){
-             
-              System.out.print(A.valor[i][j]);
-           
-            };
+    public void pintarmatriz(Casilla casilla){
+        Ficha[][] m= casilla.getMatriz();
+        int orden= casilla.getOrden();
+       
+        for (int i=0; i<=orden; i++){
+            for (int j=0; j<=orden;j++){
+              System.out.print(m[i][j].getForma() + "|");
+            };           
+        System.out.println();
     };
-    public void llenarMatriz(int x, int y){
-        Tablero A= new Tablero(x,y);
-        for (int i=0; i<x ; i++){
-            for (int j=0; j<y ;j++){
-             A.valor[i][j] = (Math.random() * 6)+1;
-            }
-           }
     }
 
 };

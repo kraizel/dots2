@@ -9,10 +9,6 @@ package dots;
  *
  * @author c0ep
  */
-public abstract class FichaEspecial extends Ficha implements Efecto{
-   
-   public FichaEspecial (int forma){ //Constructor
-        super(forma);
-}
-    
+public interface Efecto {
+   public void accion();   
 }

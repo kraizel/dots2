@@ -9,17 +9,17 @@ package dots;
  *
  * @author c0ep
  */
-public abstract class Ficha extends Casilla {
+public  class Ficha {
     //Atributos
-     private int size;
-     private String forma;
+     private final int forma;
     
     // Metodos
      
-     public  Ficha(String forma){ // Constructor
+      Ficha(int forma){ // Constructor
         this.forma=forma;
 };
-    public abstract void pintarFicha();
-    public abstract void borrarFicha();
+      public int getForma(){
+          return this.forma;
+      }
     
 }
