@@ -5,14 +5,23 @@
  */
 package dots;
 
+import java.util.Random;
+
 /**
  *
  * @author c0ep
  */
-public class Casilla {
-    int x,y; //Posicion de la casilla
-    
+public class Casilla  {
    
-  
+    private FichaNumero ficha; //Contenido de la casilla
+     Random r= new Random();
+     
     
+     public Casilla(int n){
+        this.ficha= new FichaNumero(r.nextInt(6));
+        
+     }
+     public int getFicha(){ // Obtengo la "forma" de la ficha en cada casilla
+         return this.ficha.forma;
+     }
 }
