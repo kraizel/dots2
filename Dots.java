@@ -9,7 +9,13 @@ package dots;
 public class Dots {
     
     public static void main(String[] args) {
-        Tablero tab=new Tablero(50,50);    // TODO code application logic here
+        int MaxScore=0;
+        Tablero tab= new Tablero(5);
+
+        // TODO code application logic here
+        tab.llenarTab();
+        System.out.println(tab.toString());
     }
     
 }
+    

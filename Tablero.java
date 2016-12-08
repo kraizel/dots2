@@ -5,34 +5,52 @@
  */
 package dots;
 
-final public class Tablero {
-    private final int x,y; //Filas y columnas
-    private final double[][] valor;// Valor posicion
-    private Casilla casilla;
- 
-    //Metodos:
-    public Tablero (int x, int y){ // Asigna # de filas y de columnas
-        this.x=x;
-        this.y=y;
-        valor= new double[x][y];
-        
-      };
+import java.util.Random;
+public class Tablero { 
+     int n; //Dimension
+     Random k = new Random(6);
+     public Casilla[][] C;
+     Jugada jugada;
   
-    public void pintarmatriz(Tablero A,int x, int y){
-        for (int i=0; i<=x; i++)
-            for (int j=0; j<=y;j++){
-             
-              System.out.print(A.valor[i][j]);
-           
-            };
-    };
-    public void llenarMatriz(int x, int y){
-        Tablero A= new Tablero(x,y);
-        for (int i=0; i<x ; i++){
-            for (int j=0; j<y ;j++){
-             A.valor[i][j] = (Math.random() * 6)+1;
-            }
-           }
+    //Metodos:
+    public Tablero (int n){
+       this.C = new Casilla[n][n];
+       this.n = n;
     }
 
-};
+    public void llenarTab(){
+         for (int i=0; i < n; i++){
+            for (int j=0; j < n; j++){
+                C[i][j]=new Casilla(n);
+            }
+       }
+    }
+     @Override
+    public String toString(){
+        String S=" ";
+        
+             for (int i=0;i < C.length;i++){
+                for (int j=0; j < C.length; j++){
+                    
+                    S+= C[i][j].getFicha() +"|";
+                    S+= " ";
+            }
+            S+= " \n ";
+    }
+     return S;
+ }
+   public void gravedad(){
+       
+   };
+    public void validarJugada(){
+        for (int i=0;i < C.length;i++){
+                for (int j=0; j < C.length; j++){
+                    if (jugada.jugadaLineal(C, i, j))
+                        
+                }
+        }
+                
+       }
+    
+}
+ 

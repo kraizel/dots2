@@ -9,13 +9,6 @@ package dots;
  *
  * @author c0ep
  */
-
-public abstract class Ficha  {
-  
-      public Ficha(){
-    }
-   public abstract int getValor();
- }
-
-    
-    
+public interface Efecto {
+   public void accion();    
+}
