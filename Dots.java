@@ -1,15 +1,34 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package dots;
-/** @author c0ep**/ 
+package dotslab8;
 
+/**
+ *
+ * @author LAB_L11
+ */
+import java.util.Scanner;
 public class Dots {
-    
-    public static void main(String[] args) {
-        Tablero tab=new Tablero(50,50);    // TODO code application logic here
+
+public static void main(String[] args) {
+            Partida p= new Partida();
+            Tablero t= new Tablero(5);
+            Scanner i= new Scanner(System.in);
+            
+                System.out.println("1. Iniciar Juego \n");
+                
+                System.out.println("2. Salir \n");
+                
+                int op= i.nextInt();
+               
+                switch(op){
+                    case 1: p.begin(t); 
+                            break;
+                    case 2: break;
+                }
+            
+           
+        
     }
-    
 }

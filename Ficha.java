@@ -1,25 +1,19 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package dots;
+package dotslab8;
 
 /**
  *
- * @author c0ep
+ * @author LAB_A112
  */
-public abstract class Ficha extends Casilla {
-    //Atributos
-     private int size;
-     private String forma;
+public abstract class Ficha  {
+  
+      public Ficha(){
+    }
+   public abstract int getValor();
+ }
+
     
-    // Metodos
-     
-     public  Ficha(String forma){ // Constructor
-        this.forma=forma;
-};
-    public abstract void pintarFicha();
-    public abstract void borrarFicha();
     
-}
